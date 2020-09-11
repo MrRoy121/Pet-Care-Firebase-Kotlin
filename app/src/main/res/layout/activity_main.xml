@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/logout"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="end"
+        android:src="@drawable/logout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingStart="20dp"
+        android:paddingBottom="20dp"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/addpet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="Add Pet"
+                        android:layout_margin="5dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="28sp"/>
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/add"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:text="My Pets"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="28sp"/>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/nopet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="No Pets has been added yet, Please \nAdd Pets!!"
+                android:layout_margin="5dp"
+                android:textColor="#2E2E2E"
+                android:visibility="visible"
+                android:textSize="22sp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvpet"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>
