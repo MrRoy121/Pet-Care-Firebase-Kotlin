@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.petcate.R
 import com.google.android.gms.tasks.OnSuccessListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentSnapshot
@@ -30,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var fa: FirebaseAuth
     private lateinit var logout: ImageView
     private var types: String? = null
-    private var adapter: Pet_Model_Adapter? = null
+    private var adapter: PetModelAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                             )
                         )
                     }
-                    adapter = Pet_Model_Adapter(recyclerDataArrayList, this@MainActivity)
+                    adapter = PetModelAdapter(recyclerDataArrayList, this@MainActivity)
                     recyclerView.adapter = adapter
                     if (recyclerDataArrayList.isNotEmpty()) {
                         nopet.visibility = View.GONE
