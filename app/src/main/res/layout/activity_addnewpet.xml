@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="30dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:background="@color/main"
+        android:paddingEnd="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:gravity="bottom">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Add New Pet"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="28sp"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/pname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pet Name"
+            android:padding="15dp"
+            android:textColorHint="#2E2E2E"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:layout_marginTop="20dp"
+            android:inputType="textPersonName"
+            android:background="@drawable/circle_edittext"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/circle_edittext">
+
+            <TextView
+                android:id="@+id/breed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Breed"
+                android:textColor="#2E2E2E"
+                android:textSize="22sp"/>
+
+            <Spinner
+                android:id="@+id/spbreed"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/secondary"
+                android:textColor="@color/main"
+                android:textSize="22sp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:padding="15dp"
+            android:textColorHint="#2E2E2E"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:layout_marginTop="20dp"
+            android:inputType="numberDecimal"
+            android:background="@drawable/circle_edittext"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="55dp"
+                android:text="Cancel"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textSize="26sp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:background="@drawable/circle_button_fade"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_weight=".2"
+                android:layout_height="wrap_content"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addnewpet"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="55dp"
+                android:text="Add Pet"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textSize="26sp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:background="@drawable/circle_button"/>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/prog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_gravity="center"/>
+</FrameLayout>
